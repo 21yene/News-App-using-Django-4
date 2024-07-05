@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Application definition
 
@@ -41,8 +42,10 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     "accounts.apps.AccountsConfig",
     "pages.apps.PagesConfig",
+    "articles.apps.ArticlesConfig",
 ]
 
+TIME_ZONE = "America/New_York"
 AUTH_USER_MODEL = "accounts.CustomUser"
 
 LOGIN_REDIRECT_URL = "home" # new
